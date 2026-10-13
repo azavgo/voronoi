@@ -38,6 +38,9 @@ impl eframe::App for VoronoiApp {
         ui.painter().rect_filled(window_frame, 
             0.0, egui_colour(background_rgb));
 
+        //width and height are technically f32 numbers but they 
+        //are really integers giving the current Window Frame 
+        //size in pixels
         let width = window_frame.max.x - window_frame.min.x; 
         let height = window_frame.max.y - window_frame.min.y; 
         //Drawing circles painted with COLOUR_PALETTE.points colour
